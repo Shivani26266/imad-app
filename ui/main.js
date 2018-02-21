@@ -1,4 +1,5 @@
 console.log('Loaded!');
+//counter
 var button = document.getElementById('counter');
 button.onclick = function(){
     var request = new XMLHttpRequest();
@@ -7,7 +8,7 @@ button.onclick = function(){
         if(request.readyState === XMLHttpRequest.DONE){
             if(request.status === 200){
                 var counter = request.responseText;
-                var span = document.getelementByID('count');
+                var span = document.getElementByID('count');
                 span.innerHTML = counter.toString();
             }
         }
